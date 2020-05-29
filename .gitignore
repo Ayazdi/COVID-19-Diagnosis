@@ -130,4 +130,7 @@ dmypy.json
 dataset/
 
 *.h5
+<<<<<<< HEAD
 *.json
+=======
+>>>>>>> 78adff47f88a89c50d23bc234638270ed1d4a1c8
