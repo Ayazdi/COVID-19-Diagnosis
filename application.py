@@ -2,12 +2,9 @@
 
 import os
 from flask import Flask, render_template, request, redirect, url_for, flash, send_from_directory
-from sqlalchemy import create_engine
 from werkzeug.utils import secure_filename
-# from config import POSTGRES
-#
-#
-# PG = create_engine(POSTGRES)
+from ct_scan_analyser import load_model, ct_scan_diagnosis
+
 
 UPLOAD_FOLDER = './uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
@@ -15,6 +12,8 @@ ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app = Flask(__name__)
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+model = load_model('model_2')
 
 
 def allowed_file(filename):
@@ -40,9 +39,10 @@ def upload_file():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            prediction = ct_scan_diagnosis(file)
 
-            return redirect(url_for('uploaded_file',
-                                    filename=filename))
+            return render_template('recommender.html',
+                                   result_html=prediction)
     return render_template('index.html')
 
 

@@ -14,20 +14,12 @@
         {% endif %}
         {% endwith %} -->
 
-        <h3 class="merp">Your Movies</h3>
-        <div id="movie-results">
-        {% for m, r in user_input.items() %}
-        <h5 class="recommendations">"{{m}}"</h5>
-        {% endfor %}
-        </div>
-        <br>
-        <br>
-        <h3 class="merp">Your recommendations</h3>
-        <div id="movie-results">
-        {% for i in result_html %}
-        <h5 class="recommendations">"{{ i }}"</h5>
-        {% endfor %}
-        </div>
+  <br>
+  <br>
+  <h3 class="merp">Your Diagnosis</h3>
+  <div id="movie-results">
+    <h5 class="recommendations">"{{ result_html }}"</h5>
+  </div>
 
 
 
