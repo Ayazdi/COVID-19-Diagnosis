@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- <html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>DS MOVIE RECOMMENDER</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+
+<h1 id="title"> Movies vs COVID-19 </h1>
+<br>
+<h3>We are gonna recommend you some movies to watch during the lockdown!</h3> -->
+{% extends "base.html" %}
+
+
+{% block content %}
+<section class="main-splash">
+  <img id="logo_movie" src="/static/img/movie_covid.png" alt="Cartamon Logo">
+  <h4 id="title"> Please upload the CT scan image that you want to get diagnoss by AI</h4>
+  <h1>Upload new File</h1>
+  <form method=post enctype=multipart/form-data>
+    <input type=file name=file>
+    <input type=submit value=Upload>
+  </form>
+  <p><i>sponsored by <img id="logo" src="/static/img/movierec3000_logo.png" alt="Cartamon Logo"></i></p>
+
+
+
+
+
+
+  <div class="button-container">
+
+    <form action='/recommender' method="get">
+      <h10 class="merp">Write down <span id="highlight"> movies
+        </span> you like and choose a model:</h10>
+
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="movie1" placeholder="type anything." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="movie2" placeholder="type anything." required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" name="movie3" placeholder="type anything." required>
+        </div>
+      </div>
+      </p>
+
+      <label for="models">Choose a model:</label>
+
+      <select class="custom_select" style='width:200px' name='model'>
+        <option value="Cosim">Cosim</option>
+        <option value="NMF">NMF</option>
+        <option value="Cosim Item">Cosim Item</option>
+        <option value="Cosim Item Mix">Cosim Item Mix</option>
+      </select>
+      <br>
+      <div class="button-container">
+        <button type="submit" class="btn btn-danger btn-lg m-3">Submit</button>
+      </div>
+      <!-- <input type="submit" value="Get Result"> -->
+    </form>
+
+
+  </div>
+
+</section>
+
+
+
+</body>
+
+</html>
+{% endblock %}
+=

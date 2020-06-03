@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+<section class="main-splash">
+
+  <!-- {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <p class="{{status}}">{{ message }}</p>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %} -->
+
+        <h3 class="merp">Your Movies</h3>
+        <div id="movie-results">
+        {% for m, r in user_input.items() %}
+        <h5 class="recommendations">"{{m}}"</h5>
+        {% endfor %}
+        </div>
+        <br>
+        <br>
+        <h3 class="merp">Your recommendations</h3>
+        <div id="movie-results">
+        {% for i in result_html %}
+        <h5 class="recommendations">"{{ i }}"</h5>
+        {% endfor %}
+        </div>
+
+
+
+
+  </div>
+
+  <div class="button-container">
+
+    <button onclick="location.href='/'" type="submit" class="btn btn-danger btn-lg m-3">
+      Go back
+    </button>
+
+  </div>
+
+</section>
+
+{% endblock %}

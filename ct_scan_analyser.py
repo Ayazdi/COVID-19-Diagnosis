@@ -25,7 +25,7 @@ def load_logo_model(model):
 model = load_logo_model('model_2')
 
 
-def logo_detection(image):
+def ct_scan_diagnosis(image):
     """
     Detects the infection in the chest CT scan image
 
@@ -52,3 +52,8 @@ def logo_detection(image):
         prediction = 'normal'
 
     return prediction
+
+
+if __name__ == '__main__':
+    predic = ct_scan_diagnosis('./uploads/2.jpeg')
+    print(predic)
