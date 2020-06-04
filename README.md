@@ -30,7 +30,10 @@ Step-by-step description of the model training is included in model.ipynb
 2. Clone this repository: git clone
 `https://github.com/Ayazdi/COVID-19-Diagnosis`
 
-3. Run run_web.sh and go the provided link in your browser(localhost:5000)
+3. Download and unzip the model in the project directory
+`https://www.dropbox.com/s/786sc2kodywkra1/model_2.zip?dl=0`
+
+4. Run run_web.sh and go the provided link in your browser(localhost:5000)
 
 
 ## Contacts:

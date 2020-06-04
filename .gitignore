@@ -132,3 +132,5 @@ dataset/
 *.h5
 *.json
 covid_medical_data.ipynb
+
+model_2.zip
