@@ -40,7 +40,7 @@ def ct_scan_diagnosis(image):
 
     # # load image from the url
     img = Image.open(image)
-    img= img.convert('RGB')
+    img = img.convert('RGB')
 
     # trasnform to a desireable tensor for the model
     img = img.resize((224, 224), Image.ANTIALIAS)
@@ -55,9 +55,9 @@ def ct_scan_diagnosis(image):
     prediction = np.argmax(result)
 
     if prediction == 0:
-        prediction = 'covid'
+        prediction = 'COVID-19'
     else:
-        prediction = 'normal'
+        prediction = 'Normal'
 
     return prediction
 
