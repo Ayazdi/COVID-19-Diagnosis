@@ -8,8 +8,9 @@
   height: 50px;
 }
 
-#logo_movie {
-  height: 250px;
+#logo_covid {
+  width: 500px;
+  height: 500px;
 }
 
 
@@ -84,4 +85,11 @@
   margin-bottom: 10px;
   display: flex;
   justify-content: center
+}
+
+#CT-Scan{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
 }
