@@ -3,8 +3,8 @@
 
 COVID-19 has infected more than 6 million people worldwide so far, and this number is still increasing drastically. The crucial fast approach to control the spread is testing large number of individuals. Thus, rapid diagnosis of the virus infection via CT scan images has been wildly used in many countries. This project utilizes **Computer Vision** to detect COVID-19 infection in the chest CT scan images of the patients with a highly accurate model.
 
-![screenshot](/screenshot_1.png)
-![screenshot](/screenshot_2.png)
+![screenshot](/Screenshot_1.png)
+![screenshot](/Screenshot_2.png)
 
 ## Model
 The diagnosis model was obtained by the fine-tuning Inception_V3 model and Keras image data generator using "covid-19-x-ray-10000-images dataset" from kaggle. The external validation on the test data achieved a total accuracy of 97% with average specificity of 98% and sensitivity of 94%.
