@@ -7,9 +7,9 @@ COVID-19 has infected more than 6 million people worldwide so far, and this numb
 ![screenshot](/screenshot_2.png)
 
 ## Model
-The diagnosis model was obtained by the fine-tuning Inception_V3 model and Keras image data generator using "covid-19-x-ray-10000-images dataset" from kaggle. The external validation on the test data achieved a total accuracy of 89.5% with specificity of 0.88 and sensitivity of 0.87.
+The diagnosis model was obtained by the fine-tuning Inception_V3 model and Keras image data generator using "covid-19-x-ray-10000-images dataset" from kaggle. The external validation on the test data achieved a total accuracy of 93.5% with specificity of 0.88 and sensitivity of 0.87.
 
-Step-by-step description of the model training is included in model_training.ipynb
+Step-by-step description of the model training is included in model.ipynb
 
 ## Dataset
 
